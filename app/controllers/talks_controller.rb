@@ -37,6 +37,8 @@ class TalksController < ApplicationController
   def destroy
     @talk = Talk.find(params[:id])
     @talk.destroy
+    flash[:notice] = "Talk was successfully deleted"
+    redirect_to talks_path
   end
 
   def talk_params
