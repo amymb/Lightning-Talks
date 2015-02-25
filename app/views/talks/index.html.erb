@@ -1,0 +1,8 @@
+<%=flash[:notice]%>
+<%@talks.each do |talk|%>
+  <%=talk.speaker%>
+  <%=talk.topic%>
+  <%=talk.date%>
+  <%=talk.time%>
+<%end%>
+<%=link_to "New Talk", new_talk_path%>

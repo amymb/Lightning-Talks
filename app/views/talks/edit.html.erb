@@ -1,0 +1,11 @@
+<%=form_for @talk do |f|%>
+<%=f.label :speaker %>
+<%=f.text_field :speaker%>
+<%=f.label :topic %>
+<%=f.text_field :topic%>
+<%=f.label :date %>
+<%=f.date_field :date%>
+<%=f.label :time %>
+<%=f.time_field :time%>
+<%=f.submit "Update Talk"%>
+<%end%>

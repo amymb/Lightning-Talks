@@ -8,8 +8,9 @@ class TalksController < ApplicationController
   end
 
   def create
-    @talk = Talk.new
-    if @talk.save(talk_params)
+    @talk = Talk.new(talk_params)
+    if @talk.save
+      flash[:notice] = "Talk was successfully added"
       redirect_to talks_path
     else
       render :new

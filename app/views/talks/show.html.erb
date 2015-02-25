@@ -1,0 +1,6 @@
+<%=talk.speaker%>
+<%=talk.topic%>
+<%=talk.date%>
+<%=talk.time%>
+<%=link_to "Edit Talk", edit_talk_path%>
+<%=link_to "Delete", @talk, method: :delete, data:{confirm: "are you sure you want to erase this record?"}%>
