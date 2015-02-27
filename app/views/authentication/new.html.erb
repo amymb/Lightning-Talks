@@ -1,8 +1,9 @@
+<%=flash[:notice]%>
 <%=form_tag sign_in_path do |f|%>
-<%=f.label :email %>
-<%=f.text_field :email %>
-<%=f.label :password %>
-<%=f.text_field :password %>
+<%=label_tag :email%>
+<%=text_field_tag :email %>
+<%=label_tag :password %>
+<%=password_field_tag :password %>
 
-<%=f.submit "Sign In"%>
+<%=submit_tag "Sign In"%>
 <%end%>

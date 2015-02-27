@@ -1,9 +1,21 @@
 <%=form_for @user, url: sign_up_path do |f|%>
+<%if @user.errors.any?%>
+  <p> Form is invalid</p>
+    <ul>
+    <%@user.errors.full_messages.each do |message|%>
+      <liL<%=message%></li>
+    <%end%>
+    </ul>
+  <%end%>
 <%=f.label :email%>
 <%=f.email_field :email%>
 
 <%=f.label :password%>
 <%=f.password_field :password%>
+
+<%=f.label :password_confirmation%>
+<%=f.password_field :password_confirmation%>
+
 
 <%=f.submit "Sign Up"%>
 <%end%>
